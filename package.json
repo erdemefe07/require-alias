@@ -1,7 +1,19 @@
 {
   "name": "require-alias",
   "version": "1.0.0",
+  "description": "Loads aliases from .aliasrc.json file",
   "main": "index.js",
-  "author": "erdemefe07 <erdemefesteam2@hotmail.com>",
-  "license": "MIT"
+  "author": "erdemefe07",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/erdemefe07/require-alias.git"
+  },
+  "keywords": [
+    "require",
+    "alias",
+    "import",
+    "resolver",
+    "module"
+  ]
 }
