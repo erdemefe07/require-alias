@@ -1,4 +1,4 @@
-# require-alias
+# require-aliases
 
 Require alias is zero dependency that loads paths from `.aliasrc.json` into require resolver. Also supports eslint import resolver.
 
@@ -6,18 +6,18 @@ Require alias is zero dependency that loads paths from `.aliasrc.json` into requ
 
 ```bash
 # with npm
-npm install require-alias
+npm install require-aliases
 
 # or with Yarn
-yarn add require-alias
+yarn add require-aliases
 ```
 
 ## Usage
 
-As early as possible in your application, import `require-alias`.
+As early as possible in your application, import `require-aliases`.
 
 ```javascript
-require("require-alias")
+require("require-aliases")
 ```
 
 Create a `.aliasrc.json` file in the root directory of your project.
@@ -36,14 +36,14 @@ const redis = require("@redis"); // that resolves ${rootPath}/bin/connect/redis/
 
 ## For eslint
 
-Add `require-alias/eslint` before `node` in `eslintrc.js` settings import resolver property. 
+Add `require-aliases/eslint` before `node` in `eslintrc.js` settings import resolver property. 
 
 > `.eslintrc.js`
 
 ```javascript
 module.exports = {
   settings: {
-    "import/resolver": ["require-alias/eslint", "node"],
+    "import/resolver": ["require-aliases/eslint", "node"],
   },
 };
 ```
