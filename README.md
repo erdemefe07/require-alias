@@ -36,14 +36,14 @@ const redis = require("@redis"); // that resolves ${rootPath}/bin/connect/redis/
 
 ## For eslint
 
-Add `require-alias` before `node` in `eslintrc.js` settings import resolver property. 
+Add `require-alias/eslint` before `node` in `eslintrc.js` settings import resolver property. 
 
 > `.eslintrc.js`
 
 ```javascript
 module.exports = {
   settings: {
-    "import/resolver": ["require-alias", "node"],
+    "import/resolver": ["require-alias/eslint", "node"],
   },
 };
 ```
