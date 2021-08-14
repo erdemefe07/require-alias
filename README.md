@@ -1,6 +1,6 @@
 # require-aliases
 
-Require alias is zero dependency that loads paths from `.aliasrc.json` into require resolver. Also supports eslint import resolver.
+Require alias is zero dependency that loads paths from `.aliasrc.json` into require resolver. Also supports eslint import resolver. And there is a Vscode Plugin for 'ctrl + click' support. Have a look at [Require-Alias-Vscode](https://marketplace.visualstudio.com/items?itemName=erdemefe07.require-alias)
 
 ## Install
 
@@ -51,4 +51,6 @@ module.exports = {
 ## Why should i use this instead of module-alias
 
 First of all module-alias does not support eslint.
-The second is when you using module alias, vscode does not resolves aliases. I will make a plugin for vscode that syncs aliases.
+The second is when you using module alias, vscode does not resolves aliases.
+I made a extension for Vscode that can resolve aliases with
+[Require-Alias-Vscode](https://marketplace.visualstudio.com/items?itemName=erdemefe07.require-alias) extension.
