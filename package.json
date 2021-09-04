@@ -1,8 +1,9 @@
 {
   "name": "require-aliases",
   "version": "1.0.1",
-  "description": "Loads aliases from .aliasrc.json file",
+  "description": "Load aliases make importing easy",
   "main": "index.js",
+  "types": "index.d.ts",
   "author": "erdemefe07",
   "license": "MIT",
   "repository": {
@@ -20,5 +21,7 @@
     "json5": "^2.2.0",
     "lodash.get": "^4.4.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "typescript": "^4.4.2"
+  }
 }
