@@ -1,6 +1,6 @@
 {
   "name": "require-aliases",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Load aliases make importing easy",
   "main": "index.js",
   "types": "index.d.ts",
