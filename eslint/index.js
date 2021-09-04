@@ -1,16 +1,14 @@
-const path = require("path");
-
-const aliasrc = path.join(process.cwd(), ".aliasrc.json");
-const aliases = require(aliasrc);
+/* eslint-disable */
+const { configure, isAlias, getPaths, tryPaths, isConfigured } = require('../lib');
 
 exports.interfaceVersion = 2;
-exports.resolve = (source) =>
-  Object.keys(aliases).includes(source) ? resolve(source) : reject();
-
-function resolve(source) {
-  return { found: true, path: path.join(process.cwd(), aliases[source]) };
-}
-
-function reject() {
-  return { found: false };
-}
+exports.resolve = (request, requestFrom, options) => {
+  if (!isConfigured()) {
+    configure(options ? options : undefined);
+  }
+  if (!isAlias(request)) return { found: false };
+  const paths = getPaths(request);
+  const uri = tryPaths(paths);
+  if (!uri) return { found: false };
+  return { found: true, path: uri };
+};

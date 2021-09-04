@@ -1,6 +1,6 @@
 {
   "name": "require-aliases",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Loads aliases from .aliasrc.json file",
   "main": "index.js",
   "author": "erdemefe07",
@@ -15,5 +15,10 @@
     "import",
     "resolver",
     "module"
-  ]
+  ],
+  "dependencies": {
+    "json5": "^2.2.0",
+    "lodash.get": "^4.4.2"
+  },
+  "devDependencies": {}
 }
