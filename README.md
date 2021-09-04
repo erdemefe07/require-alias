@@ -58,7 +58,7 @@ Theese fields are defaults
 ```javascript
 require("require-aliases")({
   src: '.aliasrc.json', // File that contains paths and baseUrl option
-  from: 'paths' // Aliases place
+  from: 'paths', // Aliases place
   baseSrc: 'baseUrl' // BaseSrc place
 })
 
@@ -74,7 +74,7 @@ You can use this for `tsconfig.json`
 ```javascript
 require("require-aliases")({
  src: 'tsconfig.json', // File that contains paths and baseUrl option
- from: 'compilerOptions.paths' // Aliases place
+ from: 'compilerOptions.paths', // Aliases place
  baseSrc: 'compilerOptions.baseUrl' // BaseSrc place
 })
 ```
@@ -87,7 +87,7 @@ module.exports = {
     "import/resolver": {
       "require-aliases/eslint":{
          src: 'tsconfig.json',
-         from: 'compilerOptions.paths'
+         from: 'compilerOptions.paths',
          baseSrc: 'compilerOptions.baseUrl'
       },
       node: {}
