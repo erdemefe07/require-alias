@@ -1,6 +1,6 @@
 {
   "name": "require-aliases",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Load aliases make importing easy",
   "main": "index.js",
   "types": "index.d.ts",
@@ -18,10 +18,8 @@
     "module"
   ],
   "dependencies": {
+    "debug": "^4.3.2",
     "json5": "^2.2.0",
     "lodash.get": "^4.4.2"
-  },
-  "devDependencies": {
-    "typescript": "^4.4.2"
   }
 }

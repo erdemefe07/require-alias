@@ -1,20 +1,19 @@
-const BuiltinModule = require('module');
-const { configure, isAlias, getPaths, tryPaths } = require('./lib');
+const BuiltinModule = require("module");
+const { configure, isAlias, getPaths, tryPaths } = require("./lib");
 
-/**
- * @param {Object} options
- * @param {string} [options.src=".aliasrc.json"] default .aliasrc.json
- * @param {string} [options.from="paths"] default paths
- * @param {string} [options.baseSrc="baseUrl"] default baseUrl
- */
-function config(options) {
-  configure(options);
-  register();
+function config({
+  src = ".aliasrc.json",
+  from = "paths",
+  baseSrc = "baseUrl",
+} = {}) {
+  const moveOn = configure({ src, from, baseSrc });
+  if (moveOn) register();
 }
 
 function register() {
   // Guard against poorly mocked module constructors
-  const Module = module.constructor.length > 1 ? module.constructor : BuiltinModule;
+  const Module =
+    module.constructor.length > 1 ? module.constructor : BuiltinModule;
   const realResolveFilename = Module._resolveFilename;
 
   Module._resolveFilename = (request, ...args) => {

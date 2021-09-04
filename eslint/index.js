@@ -1,10 +1,16 @@
-/* eslint-disable */
-const { configure, isAlias, getPaths, tryPaths, isConfigured } = require('../lib');
+const {
+  configure,
+  isAlias,
+  getPaths,
+  tryPaths,
+  isConfigured,
+} = require("../lib");
 
 exports.interfaceVersion = 2;
 exports.resolve = (request, requestFrom, options) => {
   if (!isConfigured()) {
-    configure(options ? options : undefined);
+    const moveOn = configure(options ? options : undefined);
+    if (!moveOn) return { found: false };
   }
   if (!isAlias(request)) return { found: false };
   const paths = getPaths(request);
